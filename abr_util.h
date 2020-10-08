@@ -4,7 +4,6 @@
 #include <list>
 #include <stdio.h>
 #include <string.h>
-#include <malloc.h>
 
 //################################ GIMP + GLib Types ########################################
 #define gint int
@@ -96,7 +95,7 @@ struct _GimpData
   guint         dirty     : 1;
   guint         internal  : 1;
   gint          freeze_count;
-  __time_t      mtime;
+  time_t      mtime;
 };
 
 typedef struct _GimpData             GimpData;
